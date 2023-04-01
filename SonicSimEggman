@@ -1,891 +1,891 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
-local Eggman = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local Frame_2 = Instance.new("Frame")
-local AutoGen = Instance.new("Folder")
-local AutogenOFF = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
-local AutogenON = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
-local AutoEggman = Instance.new("Folder")
-local AutoEggmanON = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
-local AutoEggmanOFF = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
-local TextLabel = Instance.new("TextButton")
-
---Properties:
-
-Eggman.Name = "Eggman"
-Eggman.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Eggman.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Frame.Parent = Eggman
-Frame.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
-Frame.Position = UDim2.new(0.76407373, 0, 0.570276499, 0)
-Frame.Size = UDim2.new(0, 359, 0, 246)
-
-UICorner.Parent = Frame
-
-Frame_2.Parent = Frame
-Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame_2.Position = UDim2.new(0, 0, 0.492907792, 0)
-Frame_2.Size = UDim2.new(0, 360, 0, 36)
-
-AutoGen.Name = "AutoGen"
-AutoGen.Parent = Frame
-
-AutogenOFF.Name = "Autogen OFF"
-AutogenOFF.Parent = AutoGen
-AutogenOFF.BackgroundColor3 = Color3.fromRGB(255, 6, 18)
-AutogenOFF.Position = UDim2.new(0.297222227, 0, 0.333333313, 0)
-AutogenOFF.Size = UDim2.new(0, 146, 0, 32)
-AutogenOFF.Font = Enum.Font.SourceSans
-AutogenOFF.Text = "AutoGen [OFF]"
-AutogenOFF.TextColor3 = Color3.fromRGB(0, 0, 0)
-AutogenOFF.TextSize = 14.000
-AutogenOFF.MouseButton1Down:connect(function()
-	_G.AutoGenKill= false;
-	_G.AutoEggmanKiller = false;
-	_G.EggFunction1 = true;
-	_G.EggOrRebirth2 = true;
+if game.Players.LocalPlayer.Name == {'2opum', 'Raspberry', 'ImNotBluescreenMan', 'LucasDaTrainer', 'MEmcdonaldswifi_1123'} then
+	local Eggman = Instance.new("ScreenGui")
+	local Frame = Instance.new("Frame")
+	local UICorner = Instance.new("UICorner")
+	local Frame_2 = Instance.new("Frame")
+	local AutoGen = Instance.new("Folder")
+	local AutogenOFF = Instance.new("TextButton")
+	local UICorner_2 = Instance.new("UICorner")
+	local AutogenON = Instance.new("TextButton")
+	local UICorner_3 = Instance.new("UICorner")
+	local AutoEggman = Instance.new("Folder")
+	local AutoEggmanON = Instance.new("TextButton")
+	local UICorner_4 = Instance.new("UICorner")
+	local AutoEggmanOFF = Instance.new("TextButton")
+	local UICorner_5 = Instance.new("UICorner")
+	local TextLabel = Instance.new("TextButton")
 
 
-	--AutoGenKill
+	--Properties:
 
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 1
+	Eggman.Name = "Eggman"
+	Eggman.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	Eggman.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+	Frame.Parent = Eggman
+	Frame.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+	Frame.Position = UDim2.new(0.76407373, 0, 0.570276499, 0)
+	Frame.Size = UDim2.new(0, 359, 0, 246)
+
+	UICorner.Parent = Frame
+
+	Frame_2.Parent = Frame
+	Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Frame_2.Position = UDim2.new(0, 0, 0.492907792, 0)
+	Frame_2.Size = UDim2.new(0, 360, 0, 36)
+
+	AutoGen.Name = "AutoGen"
+	AutoGen.Parent = Frame
+
+	AutogenOFF.Name = "Autogen OFF"
+	AutogenOFF.Parent = AutoGen
+	AutogenOFF.BackgroundColor3 = Color3.fromRGB(255, 6, 18)
+	AutogenOFF.Position = UDim2.new(0.297222227, 0, 0.333333313, 0)
+	AutogenOFF.Size = UDim2.new(0, 146, 0, 32)
+	AutogenOFF.Font = Enum.Font.SourceSans
+	AutogenOFF.Text = "AutoGen [OFF]"
+	AutogenOFF.TextColor3 = Color3.fromRGB(0, 0, 0)
+	AutogenOFF.TextSize = 14.000
+	AutogenOFF.MouseButton1Down:connect(function()
+		_G.AutoGenKill= false;
+		_G.AutoEggmanKiller = false;
+		_G.EggFunction1 = true;
+		_G.EggOrRebirth2 = true;
+
+
+		--AutoGenKill
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 1
+					}
 				}
-			}
 
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
 
-			wait()
-		end
-	end)
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 2
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 3
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 4
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 5
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 6
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 7
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 8
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-	spawn(function ()
-		while wait() do
-			if not _G.AutoEggmanKiller then
-				break
+				wait()
 			end
+		end)
 
 
-			local args = {
-				[1] = "Damage",
-				[2] = {}
-			}
 
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-		end
-	end)
-end)
-UICorner_2.Parent = AutogenOFF
-
-AutogenON.Name = "Autogen ON"
-AutogenON.Parent = AutoGen
-AutogenON.BackgroundColor3 = Color3.fromRGB(25, 255, 21)
-AutogenON.Position = UDim2.new(0.297222227, 0, 0.180851057, 0)
-AutogenON.Size = UDim2.new(0, 146, 0, 32)
-AutogenON.Font = Enum.Font.SourceSans
-AutogenON.Text = "AutoGen [ON]"
-AutogenON.TextColor3 = Color3.fromRGB(0, 0, 0)
-AutogenON.TextSize = 14.000
-AutogenON.MouseButton1Down:connect(function()
-	_G.AutoGenKill= true;
-	_G.AutoEggmanKiller = false;
-	_G.EggFunction1 = false;
-	_G.EggOrRebirth2 = false;
-
-
-	--AutoGenKill
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 1
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 2
+					}
 				}
-			}
 
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
 
-			wait()
-		end
-	end)
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 2
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 3
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 4
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 5
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 6
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 7
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 8
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-	spawn(function ()
-		while wait() do
-			if not _G.AutoEggmanKiller then
-				break
+				wait()
 			end
+		end)
 
 
-			local args = {
-				[1] = "Damage",
-				[2] = {}
-			}
 
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-		end
-	end)
-end)
-UICorner_3.Parent = AutogenON
-
-AutoEggman.Name = "AutoEggman"
-AutoEggman.Parent = Frame
-
-AutoEggmanON.Name = "AutoEggman ON"
-AutoEggmanON.Parent = AutoEggman
-AutoEggmanON.BackgroundColor3 = Color3.fromRGB(25, 255, 21)
-AutoEggmanON.Position = UDim2.new(0.308333337, 0, 0.677304983, 0)
-AutoEggmanON.Size = UDim2.new(0, 146, 0, 32)
-AutoEggmanON.Font = Enum.Font.SourceSans
-AutoEggmanON.Text = "AutoEggman [ON]"
-AutoEggmanON.TextColor3 = Color3.fromRGB(0, 0, 0)
-AutoEggmanON.TextSize = 14.000
-AutoEggmanON.MouseButton1Down:connect(function()
-	_G.AutoGenKill= false;
-	_G.AutoEggmanKiller = true;
-	_G.EggFunction1 = true;
-	_G.EggOrRebirth2 = true;
-
-
-	--AutoGenKill
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 1
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 3
+					}
 				}
-			}
 
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
 
-			wait()
-		end
-	end)
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 2
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 3
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 4
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 5
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 6
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 7
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 8
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-	spawn(function ()
-		while wait() do
-			if not _G.AutoEggmanKiller then
-				break
+				wait()
 			end
+		end)
 
 
-			local args = {
-				[1] = "Damage",
-				[2] = {}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-		end
-	end)
-end)
-UICorner_4.Parent = AutoEggmanON
-
-AutoEggmanOFF.Name = "AutoEggman OFF"
-AutoEggmanOFF.Parent = AutoEggman
-AutoEggmanOFF.BackgroundColor3 = Color3.fromRGB(255, 6, 18)
-AutoEggmanOFF.Position = UDim2.new(0.308333337, 0, 0.84397161, 0)
-AutoEggmanOFF.Size = UDim2.new(0, 146, 0, 32)
-AutoEggmanOFF.Font = Enum.Font.SourceSans
-AutoEggmanOFF.Text = "AutoEggman [OFF]"
-AutoEggmanOFF.TextColor3 = Color3.fromRGB(0, 0, 0)
-AutoEggmanOFF.TextSize = 14.000
-AutoEggmanOFF.MouseButton1Down:connect(function()
-	_G.AutoGenKill= false;
-	_G.AutoEggmanKiller = false;
-	_G.EggFunction1 = true;
-	_G.EggOrRebirth2 = true;
 
 
-	--AutoGenKill
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 1
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 4
+					}
 				}
-			}
 
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
 
-			wait()
-		end
-	end)
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 2
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 3
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 4
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 5
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 6
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 7
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 8
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-	spawn(function ()
-		while wait() do
-			if not _G.AutoEggmanKiller then
-				break
+				wait()
 			end
+		end)
 
 
-			local args = {
-				[1] = "Damage",
-				[2] = {}
-			}
 
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-		end
-	end)
-end)
-UICorner_5.Parent = AutoEggmanOFF
-
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.Size = UDim2.new(0, 360, 0, 35)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "auto eggy (CLICK ME TO LOAD/RESET SCRIPT)"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextSize = 14.000
-TextLabel.MouseButton1Down:connect(function()
-	_G.AutoGenKill= false;
-	_G.AutoEggmanKiller = false;
-	_G.EggFunction1 = true;
-	_G.EggOrRebirth2 = true;
-
-
-	--AutoGenKill
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 1
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 5
+					}
 				}
-			}
 
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
 
-			wait()
-		end
-	end)
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 2
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 3
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 4
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 5
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 6
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 7
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-
-	spawn(function ()
-		while _G.AutoGenKill == true do
-			local args = {
-				[1] = "GeneratorDamaged",
-				[2] = {
-					["Generator"] = 8
-				}
-			}
-
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
-
-			wait()
-		end
-	end)
-
-	spawn(function ()
-		while wait() do
-			if not _G.AutoEggmanKiller then
-				break
+				wait()
 			end
+		end)
 
 
-			local args = {
-				[1] = "Damage",
-				[2] = {}
-			}
 
-			game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 6
+					}
+				}
 
-		end
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 7
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 8
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+		spawn(function ()
+			while wait() do
+				if not _G.AutoEggmanKiller then
+					break
+				end
+
+
+				local args = {
+					[1] = "Damage",
+					[2] = {}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+			end
+		end)
 	end)
-end)
+	UICorner_2.Parent = AutogenOFF
+
+	AutogenON.Name = "Autogen ON"
+	AutogenON.Parent = AutoGen
+	AutogenON.BackgroundColor3 = Color3.fromRGB(25, 255, 21)
+	AutogenON.Position = UDim2.new(0.297222227, 0, 0.180851057, 0)
+	AutogenON.Size = UDim2.new(0, 146, 0, 32)
+	AutogenON.Font = Enum.Font.SourceSans
+	AutogenON.Text = "AutoGen [ON]"
+	AutogenON.TextColor3 = Color3.fromRGB(0, 0, 0)
+	AutogenON.TextSize = 14.000
+	AutogenON.MouseButton1Down:connect(function()
+		_G.AutoGenKill= true;
+		_G.AutoEggmanKiller = false;
+		_G.EggFunction1 = false;
+		_G.EggOrRebirth2 = false;
+
+
+		--AutoGenKill
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 1
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 2
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 3
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 4
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 5
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 6
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 7
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 8
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+		spawn(function ()
+			while wait() do
+				if not _G.AutoEggmanKiller then
+					break
+				end
+
+
+				local args = {
+					[1] = "Damage",
+					[2] = {}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+			end
+		end)
+	end)
+	UICorner_3.Parent = AutogenON
+
+	AutoEggman.Name = "AutoEggman"
+	AutoEggman.Parent = Frame
+
+	AutoEggmanON.Name = "AutoEggman ON"
+	AutoEggmanON.Parent = AutoEggman
+	AutoEggmanON.BackgroundColor3 = Color3.fromRGB(25, 255, 21)
+	AutoEggmanON.Position = UDim2.new(0.308333337, 0, 0.677304983, 0)
+	AutoEggmanON.Size = UDim2.new(0, 146, 0, 32)
+	AutoEggmanON.Font = Enum.Font.SourceSans
+	AutoEggmanON.Text = "AutoEggman [ON]"
+	AutoEggmanON.TextColor3 = Color3.fromRGB(0, 0, 0)
+	AutoEggmanON.TextSize = 14.000
+	AutoEggmanON.MouseButton1Down:connect(function()
+		_G.AutoGenKill= false;
+		_G.AutoEggmanKiller = true;
+		_G.EggFunction1 = true;
+		_G.EggOrRebirth2 = true;
+
+
+		--AutoGenKill
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 1
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 2
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 3
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 4
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 5
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 6
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 7
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 8
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+		spawn(function ()
+			while wait() do
+				if not _G.AutoEggmanKiller then
+					break
+				end
+
+
+				local args = {
+					[1] = "Damage",
+					[2] = {}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+			end
+		end)
+	end)
+	UICorner_4.Parent = AutoEggmanON
+
+	AutoEggmanOFF.Name = "AutoEggman OFF"
+	AutoEggmanOFF.Parent = AutoEggman
+	AutoEggmanOFF.BackgroundColor3 = Color3.fromRGB(255, 6, 18)
+	AutoEggmanOFF.Position = UDim2.new(0.308333337, 0, 0.84397161, 0)
+	AutoEggmanOFF.Size = UDim2.new(0, 146, 0, 32)
+	AutoEggmanOFF.Font = Enum.Font.SourceSans
+	AutoEggmanOFF.Text = "AutoEggman [OFF]"
+	AutoEggmanOFF.TextColor3 = Color3.fromRGB(0, 0, 0)
+	AutoEggmanOFF.TextSize = 14.000
+	AutoEggmanOFF.MouseButton1Down:connect(function()
+		_G.AutoGenKill= false;
+		_G.AutoEggmanKiller = false;
+		_G.EggFunction1 = true;
+		_G.EggOrRebirth2 = true;
+
+
+		--AutoGenKill
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 1
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 2
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 3
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 4
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 5
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 6
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 7
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 8
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+		spawn(function ()
+			while wait() do
+				if not _G.AutoEggmanKiller then
+					break
+				end
+
+
+				local args = {
+					[1] = "Damage",
+					[2] = {}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+			end
+		end)
+	end)
+	UICorner_5.Parent = AutoEggmanOFF
+
+	TextLabel.Parent = Frame
+	TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel.Size = UDim2.new(0, 360, 0, 35)
+	TextLabel.Font = Enum.Font.SourceSans
+	TextLabel.Text = "auto eggy (CLICK ME TO LOAD/RESET SCRIPT)"
+	TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+	TextLabel.TextSize = 14.000
+	TextLabel.MouseButton1Down:connect(function()
+		_G.AutoGenKill= false;
+		_G.AutoEggmanKiller = false;
+		_G.EggFunction1 = true;
+		_G.EggOrRebirth2 = true;
+
+
+		--AutoGenKill
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 1
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 2
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 3
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 4
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 5
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 6
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 7
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+
+		spawn(function ()
+			while _G.AutoGenKill == true do
+				local args = {
+					[1] = "GeneratorDamaged",
+					[2] = {
+						["Generator"] = 8
+					}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+				wait()
+			end
+		end)
+
+		spawn(function ()
+			while wait() do
+				if not _G.AutoEggmanKiller then
+					break
+				end
+
+
+				local args = {
+					[1] = "Damage",
+					[2] = {}
+				}
+
+				game:GetService("ReplicatedStorage").Knit.Services.BossBattleService.RE.UpdateBattleState:FireServer(unpack(args))
+
+			end
+		end)
+	end)
+else
+	game.Players.LocalPlayer:Kick('Your not on the Whitelist!')
+end
