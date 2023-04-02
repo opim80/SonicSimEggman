@@ -1,4 +1,4 @@
-if game.Players.LocalPlayer.Name == {'2opum', 'Raspberry', 'ImNotBluescreenMan', 'LucasDaTrainer', 'MEmcdonaldswifi_1123'} then
+if game.Players.LocalPlayer.Name == 'MEmcdonaldswifi_1123' then
 	local Eggman = Instance.new("ScreenGui")
 	local Frame = Instance.new("Frame")
 	local UICorner = Instance.new("UICorner")
