@@ -1,4 +1,38 @@
-local key = 'loocuasiscoolie';
+
+local module = {"FwootGummy","ImNotBlueScreenMan","MEmcdonaldswifi_1123"}
+
+function module:CheckWhitelist(plr)
+	local iswhitelisted = false
+	for i,plr in pairs(module) do
+		if users == plr then
+			iswhitelisted = true
+            if iswhitelisted == false then game.Players.LocalPlayer:Kick("Not whitelisted!")
+		end
+    end 
+end 
+
+	return iswhitelisted
+end
+
+
+_G.Key = "2opum"
+
+local keys = {
+    "2opum",
+    "Fwootgummy",
+    "ImNotBluescreenMan"
+}
+
+local counter = 1
+
+
+for i,v in pairs(keys) do
+    if counter == #keys then
+        --not whitelisted
+        game.Players.LocalPlayer:Kick("Not whitelisted!")
+    end
+end
+
 
 if key == 'loocuasiscoolie' then
 	local Eggman = Instance.new("ScreenGui")
