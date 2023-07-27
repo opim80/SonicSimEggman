@@ -1,5 +1,3 @@
-if game.Players.LocalPlayer.Name == "FwootGummy","LucasDaTrainer","MEmcdonaldswifi_1123","BingusGladiator"
-then 
 	local Eggman = Instance.new("ScreenGui")
 	local Frame = Instance.new("Frame")
 	local UICorner = Instance.new("UICorner")
@@ -887,5 +885,3 @@ then
 			end
 		end)
     end)
-else do
-    game.LocalPlayer.Players:kick("nonp") end end
